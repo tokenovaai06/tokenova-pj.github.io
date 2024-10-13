@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokenova Aidana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="logo">
+            <img src="img/logo.PNG" alt="Logo"> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="family.html">My family </a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="edu.html">Education</a></li>
+        </ul>
+    </nav>
+</header>
+<section id="family" class="family-section">
+    <div class="family-background"></div>
+    <div class="family-content">
+        <h2>My Happy Family</h2>
+        <p>I have a wonderful family, and I consider myself a very happy child. There are four girls in our family, and I am the second daughter. I have one older sister and two younger sisters. We share a lot of love and joy in our home, and I cherish the moments we spend together.</p>
+    </div>
+</section>
+
+
+<section id="family2" class="family2-section">
+    <div class="family2-content">
+        <div class="quote-container">
+            <blockquote>
+                The love of<br> a family is life's <br>greatest <br>blessing.
+            </blockquote>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-button left" onclick="prevMember()">&#10094;</button>
+            <div class="member-carousel">
+                <div class="member">
+                    <div class="member-background">
+                        <img src="img/dad.jpg" alt="Member 1" class="member-photo">
+                        <div class="member-details">
+                            <h3>My Dad<br>Talgat​</h3>
+                            <p>​ was born on July 8, 1970.<br> He works as a builder and always brings a sense <br>of stability and security to our home. <br>His hard work and dedication to our family <br>inspire me every day.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-background">
+                        <img src="img/mom.jpg" alt="Member 2" class="member-photo">
+                        <div class="member-details">
+                            <h3>My Mom<br>Almagul</h3>
+                            <p>​was born on July 31, 1978.<br> She is an amazing woman who always supports <br>us and cares for our well-being. My mom is my <br>best friend and advisor, and I am proud<br> to have her as my mother.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-background">
+                        <img src="img/apai_zhezde.jpg" alt="Sister & Brother in-law" class="member-photo">
+                        <div class="member-details">
+                            <h3>Sister & Brother-in-law</h3>
+                            <p>My sister is 27 years old,<br> and her husband is 30. Both of <br>them work as military officers, <br>making them a brave and responsible couple.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-background">
+                        <img src="img/tomi.jpg" alt="My Niece" class="member-photo">
+                        <div class="member-details">
+                            <h3>My niece<br> Tomiris</h3>
+                            <p>My niece is 3 years old.<br> She is a very energetic and<br> curious girl who loves to <br>play and learn. Despite her <br>young age, she already shows <br>interest in books and drawing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-background">
+                        <img src="img/ademush.jpg" alt="My Younger Sister" class="member-photo">
+                        <div class="member-details">
+                            <h3>My younger sister<br>Adema</h3>
+                            <p>She is 14 years old. She loves to draw and<br>also plays basketball and takes guitar lessons.<br>I am proud to call her my sister.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="member-background">
+                        <img src="img/aizek.jpg" alt="My Youngest Sister" class="member-photo">
+                        <div class="member-details">
+                            <h3>My youngest sister<br>Aizere</h3>
+                            <p>She is 7 years old, and<br> she is our favorite. She is very sweet <br>and loves attention. Her playfulness<br> and carefree spirit make her<br> the darling of the whole family.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button right" onclick="nextMember()">&#10095;</button>
+        </div>
+    </div>
+</section> 
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+        <div class="contact-form">
+            <div class="information">
+                <p><i class="fas fa-map-marker-alt"></i> Almaty region, Kaskelen city, Abylay Khan 1/1</p>
+                <p><i class="fas fa-envelope"></i> aidanatokenova06@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +7 (707) 968-29-60</p>
+            </div>
+
+            <form id="contact-form" action="https://formspree.io/f/mrgnndvk" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="social-media">
+            <a href="https://www.instagram.com/tokenova_aidana" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://t.me/tokenova_a" target="_blank" class="social-link">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div>
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799039168!2d-74.25986768775158!3d40.69767006325212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a2af98b1c07%3A0xc3207cf56de82f77!2z0JrQsNCy0YvQutC-0LLQvtCx0YzQvtC10LzQvtCy!5e0!3m2!1sru!2skz!4v1630632608822!5m2!1sru!2skz" 
+                width="400" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div>
+        <span>&copy; 2024 Tokenova Aidana</span>
+        <a href="family.html">To the top</a>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+      </body>
+      </html>  
+      
+
+
+
+
+
+
+
+
+
+

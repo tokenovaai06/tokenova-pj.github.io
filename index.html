@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokenova Aidana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+        <div class="logo">
+            <img src="img/logo.PNG" alt="Logo"> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="family.html">My family </a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="edu.html">Education</a></li>
+        </ul>
+    </nav>
+</header>
+    
+    <section id="home" class="hero-section">
+        <h1>Hi There! 👋 <br>I'M <span class="highlight">TOKENOVA AIDANA</span></h1>
+        <div class="photo-grid">
+            <img src="img/me3.jpg" alt="Photo 1" class="photo-rect-large">  
+            <img src="img/im2.jpg" alt="Photo 2" class="photo-square">  
+            <img src="img/im.jpg" alt="Photo 3" class="photo-square">     
+            <img src="img/me.jpg" alt="Photo 4" class="photo-rect-large">  
+        </div>
+    </section>    
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+        <div class="contact-form">
+            <div class="information">
+                <p><i class="fas fa-map-marker-alt"></i> Almaty region, Kaskelen city, Abylay Khan 1/1</p>
+                <p><i class="fas fa-envelope"></i> aidanatokenova06@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +7 (707) 968-29-60</p>
+            </div>
+
+            <form id="contact-form" action="https://formspree.io/f/mrgnndvk" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- <div class="social-media">
+            <a href="https://www.instagram.com/tokenova_aidana" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://t.me/tokenova_a" target="_blank" class="social-link">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div> -->
+    </div>
+</div>
+
+</section>
+
+
+
+<footer>
+    <div>
+        <span>&copy; 2024 Tokenova Aidana</span>
+        <a href="index.html">To the top</a>
+    </div>
+</footer>
+
+
+  <script>
+
+let currentIndex = 0;
+const members = document.querySelectorAll('.member-carousel .member');
+const totalMembers = members.length;
+
+function showMembers(index) {
+    members.forEach((member, i) => {
+        member.style.display = (i === index || i === (index + 1) % totalMembers) ? 'block' : 'none';
+    });
+}
+
+function prevMember() {
+    currentIndex = (currentIndex - 2 + totalMembers) % totalMembers;
+    showMembers(currentIndex);
+}
+
+function nextMember() {
+    currentIndex = (currentIndex + 2) % totalMembers;
+    showMembers(currentIndex);
+}
+
+showMembers(currentIndex);
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contact-form');
+      
+      form.addEventListener('submit', function (event) {
+          event.preventDefault(); 
+  
+          const formData = new FormData(form);
+  
+          fetch(form.action, {
+              method: form.method,
+              body: formData,
+              headers: {
+                  'Accept': 'application/json'
+              }
+          }).then(response => {
+              if (response.ok) {
+                  alert('Email sent successfully!');
+                  form.reset(); 
+              } else {
+                  response.json().then(data => {
+                      if (Object.hasOwn(data, 'errors')) {
+                          alert(data["errors"].map(error => error["message"]).join(", "));
+                      } else {
+                          alert('Not sent.');
+                      }
+                  })
+              }
+          }).catch(error => {
+              alert('Not sent.');
+          });
+      });
+  });
+
+  </script>    
+</body>
+</html>  
+
+
+
+
+
+
+
+
+
+
